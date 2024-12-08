@@ -1,15 +1,10 @@
 'use client'
 import { UserIcon, HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState } from 'react';
 
 import Image from 'next/image';
 
 export default function Hero() {
-  const [selectedCity, setSelectedCity] = useState('');
-
-  function handleCityChange(event: ChangeEvent<HTMLSelectElement>): void {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <div className="min-h-screen bg-gray-100">
