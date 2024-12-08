@@ -246,9 +246,13 @@ export default function Hero() {
                 height={200}
                 className="rounded-lg"
               />
-              <p className="flex text-gray-400 font-semibold">
-                <span className="text-black">{car.price}</span>/day
-              </p>
+              <div className='flex'>
+             
+             <span className="text-black">{car.price}</span>
+             <p className=" text-gray-400 font-semibold">
+               /day
+             </p>
+</div>  
 
               <div className="mt-2 flex items-center space-x-4 text-gray-600">
                 <div className="flex items-center space-x-1">
@@ -307,8 +311,14 @@ export default function Hero() {
                   width={300}
                   height={200}
                   className="rounded-lg"
-                />              <p className="flex text-gray-400 font-semibold"><p className='text-black'>{car.price}</p>/day</p>
-  
+                />             
+                <div className='flex'>
+             
+             <span className="text-black">{car.price}</span>
+             <p className=" text-gray-400 font-semibold">
+               /day
+             </p>
+</div>  
              <div className="mt-2 flex items-center space-x-4 text-gray-600">
                   <div className="flex items-center space-x-1">
                     <BeakerIcon className="h-5 w-5 text-gray-400" />
