@@ -1,10 +1,18 @@
 'use client'
+<<<<<<< HEAD
 import {  HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
 
 import Image from 'next/image';
 
 export default function Hero() {
 
+=======
+import { HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
+import React, { useState } from 'react';
+import Image from 'next/image';
+
+export default function Hero() {
+>>>>>>> 72aa4ea8456de69a1d14406f266202cb89753fbc
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -22,7 +30,11 @@ export default function Hero() {
       src="https://s3-alpha-sig.figma.com/img/2385/cc01/da9bb791587b8022c475d39822c50c17?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od1UBAJf7E5O46664edEbxigGSpM3-JsBv04704PcK-9d~RrvEs6ppQdIFAuV5SO7DK4KdIOedl7rLfh~ZdB8p2H010WWUIxpXiNh9sQzC8FF~k9lq2soe-51CJOCWNOQ9uBXLpaV2LlgrPiSwu1sOYI0xh~8DBSlQU2flfi~ymjFBtsgzmBfOZ~JLvE2WnajtJi5we3G6HDB9TGun3wd~4ItGLCzi-d13QfTCKEnDG8TSJFZPpuhqdW7969joySadH-urF54-xyCZb73147LVY6vp7yqYicDPozXo-d2EmYfXV9MsNGO99O7z6K3K9ay3ZXZ4wiPTFv3OpE5E4otw__"
       alt="Car Image"
       className="mt-4 w-full rounded-lg"
+<<<<<<< HEAD
       width={100}
+=======
+       width={100}
+>>>>>>> 72aa4ea8456de69a1d14406f266202cb89753fbc
       height={100}
     />
   </div>
@@ -36,11 +48,19 @@ export default function Hero() {
       and safe and comfortable facilities.
     </p>
     <button className="bg-blue-400 p-2 text-white mt-5">Rental car</button>
+<<<<<<< HEAD
     <Image
       src="https://s3-alpha-sig.figma.com/img/702f/356e/48fe531e6fd2626c5d1041dbfcde3341?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pqchb2LXG1CzJVi8REocxTFmgsniQaQk94twikFDvW6t8unY0uN2iDgogKE7OynrmQcTaYNIAx5gzKNwVosBBUk67rgYzDQoM~MF6xD~Q4FdJCThW4M9Jx5ivd8zn4ZhbCj1htJh0idZ4nfAHEhovLfAheB7Pzse-8b4sPa3zWL8gnyyGjO7I9oi438zN0Uowsd4br~oZbWBc~d6b94I0IrcmL3OABEejvj1qBBnPvFqVYMuYmR7XEEfzN~EiPGCbSgAvJQJKT8YUrjxu-Ac5KIA5ELqg7y44XdIxm2sy2j~xK35INzWCwGjLIfRoGy3hyxBMeyOALaz0FypwC6N2A__"
       alt="Car Image"
       className="mt-4 w-full rounded-lg"
       width={100}
+=======
+  <Image
+      src="https://s3-alpha-sig.figma.com/img/702f/356e/48fe531e6fd2626c5d1041dbfcde3341?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pqchb2LXG1CzJVi8REocxTFmgsniQaQk94twikFDvW6t8unY0uN2iDgogKE7OynrmQcTaYNIAx5gzKNwVosBBUk67rgYzDQoM~MF6xD~Q4FdJCThW4M9Jx5ivd8zn4ZhbCj1htJh0idZ4nfAHEhovLfAheB7Pzse-8b4sPa3zWL8gnyyGjO7I9oi438zN0Uowsd4br~oZbWBc~d6b94I0IrcmL3OABEejvj1qBBnPvFqVYMuYmR7XEEfzN~EiPGCbSgAvJQJKT8YUrjxu-Ac5KIA5ELqg7y44XdIxm2sy2j~xK35INzWCwGjLIfRoGy3hyxBMeyOALaz0FypwC6N2A__"
+      alt="Car Image"
+      className="mt-4 w-full rounded-lg"
+     width={100}
+>>>>>>> 72aa4ea8456de69a1d14406f266202cb89753fbc
       height={100}
     />
   </div>
@@ -248,11 +268,19 @@ export default function Hero() {
               />
               <div className='flex'>
              
+<<<<<<< HEAD
               <span className="text-black">{car.price}</span>
               <p className=" text-gray-400 font-semibold">
                 /day
               </p>
 </div>
+=======
+             <span className="text-black">{car.price}</span>
+             <p className=" text-gray-400 font-semibold">
+               /day
+             </p>
+</div>  
+>>>>>>> 72aa4ea8456de69a1d14406f266202cb89753fbc
 
               <div className="mt-2 flex items-center space-x-4 text-gray-600">
                 <div className="flex items-center space-x-1">
@@ -311,8 +339,13 @@ export default function Hero() {
                   width={300}
                   height={200}
                   className="rounded-lg"
+<<<<<<< HEAD
 />
 <div className='flex'>
+=======
+                />             
+                <div className='flex'>
+>>>>>>> 72aa4ea8456de69a1d14406f266202cb89753fbc
              
              <span className="text-black">{car.price}</span>
              <p className=" text-gray-400 font-semibold">
