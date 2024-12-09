@@ -1,6 +1,6 @@
 'use client'
 import { HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
-import React { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
