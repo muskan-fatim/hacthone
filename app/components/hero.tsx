@@ -283,12 +283,9 @@ export default function Hero() {
             { name: 'New MG ZS', price: '$86.00', people: "6", transmission: "Mannual", fuel: "80L", image: "https://s3-alpha-sig.figma.com/img/2ed7/5540/73defa787d71b948931bdf156be51493?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ONSxK~-zlR4PcE8E~-IaMgarN17IyBVcgBDMWBKXTnTloQY2xWBXJc9s3zlf8TZfjZiWF7mzUE2DGaaHIYTJyMDZIPV6-TVyE-qziZIq~xfl1CO53WULROdCUN7-hiTcCmdWggbPHwG3Qg1VzwE3fzpRHif9W3bQKzu2SmdrOMEhdfw0Hys5hEwXVMPtUaJ9tw2HQYrJCamUGYunePqARfl2gIwNthFN2hzLNjQg1pia3eNU5WoebNNeZ209k1puQH~xOPzsA5o9UPVGH2Wq89eIUPjvSKy6I6BPzSQH-Wyu43uvUdHCvhHKq8VBvzVbTejJWbOrbXbZv7ZTKN77Ow__" },
           ].map((car, index) => (
             <div key={index} className="bg-white f rounded-lg shadow-lg p-4">
-              <div className='flex'>
-
-
+              <div className="flex justify-between items-start">
                 <h3 className="text-lg font-bold mt-4">{car.name}</h3>
                 <HeartIcon className="h-5 w-5 text-gray-400" />
-
               </div>
               <p className='text-gray-400'>suv</p>
               <Image
