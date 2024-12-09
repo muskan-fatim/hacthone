@@ -1,15 +1,10 @@
 'use client'
-import { UserIcon, HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
-import React, { ChangeEvent, useState } from 'react';
+import {  HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
 
 import Image from 'next/image';
 
 export default function Hero() {
-  const [selectedCity, setSelectedCity] = useState('');
 
-  function handleCityChange(event: ChangeEvent<HTMLSelectElement>): void {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -23,10 +18,12 @@ export default function Hero() {
       Of course at a low price.
     </p>
     <button className="bg-blue-600 p-2 text-white mt-5">Rental car</button>
-    <img
+    <Image
       src="https://s3-alpha-sig.figma.com/img/2385/cc01/da9bb791587b8022c475d39822c50c17?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od1UBAJf7E5O46664edEbxigGSpM3-JsBv04704PcK-9d~RrvEs6ppQdIFAuV5SO7DK4KdIOedl7rLfh~ZdB8p2H010WWUIxpXiNh9sQzC8FF~k9lq2soe-51CJOCWNOQ9uBXLpaV2LlgrPiSwu1sOYI0xh~8DBSlQU2flfi~ymjFBtsgzmBfOZ~JLvE2WnajtJi5we3G6HDB9TGun3wd~4ItGLCzi-d13QfTCKEnDG8TSJFZPpuhqdW7969joySadH-urF54-xyCZb73147LVY6vp7yqYicDPozXo-d2EmYfXV9MsNGO99O7z6K3K9ay3ZXZ4wiPTFv3OpE5E4otw__"
       alt="Car Image"
       className="mt-4 w-full rounded-lg"
+      width={100}
+      height={100}
     />
   </div>
 
@@ -39,10 +36,12 @@ export default function Hero() {
       and safe and comfortable facilities.
     </p>
     <button className="bg-blue-400 p-2 text-white mt-5">Rental car</button>
-    <img
+    <Image
       src="https://s3-alpha-sig.figma.com/img/702f/356e/48fe531e6fd2626c5d1041dbfcde3341?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pqchb2LXG1CzJVi8REocxTFmgsniQaQk94twikFDvW6t8unY0uN2iDgogKE7OynrmQcTaYNIAx5gzKNwVosBBUk67rgYzDQoM~MF6xD~Q4FdJCThW4M9Jx5ivd8zn4ZhbCj1htJh0idZ4nfAHEhovLfAheB7Pzse-8b4sPa3zWL8gnyyGjO7I9oi438zN0Uowsd4br~oZbWBc~d6b94I0IrcmL3OABEejvj1qBBnPvFqVYMuYmR7XEEfzN~EiPGCbSgAvJQJKT8YUrjxu-Ac5KIA5ELqg7y44XdIxm2sy2j~xK35INzWCwGjLIfRoGy3hyxBMeyOALaz0FypwC6N2A__"
       alt="Car Image"
       className="mt-4 w-full rounded-lg"
+      width={100}
+      height={100}
     />
   </div>
 </div>
@@ -247,9 +246,13 @@ export default function Hero() {
                 height={200}
                 className="rounded-lg"
               />
-              <p className="flex text-gray-400 font-semibold">
-                <span className="text-black">{car.price}</span>/day
+              <div className='flex'>
+             
+              <span className="text-black">{car.price}</span>
+              <p className=" text-gray-400 font-semibold">
+                /day
               </p>
+</div>
 
               <div className="mt-2 flex items-center space-x-4 text-gray-600">
                 <div className="flex items-center space-x-1">
@@ -308,8 +311,14 @@ export default function Hero() {
                   width={300}
                   height={200}
                   className="rounded-lg"
-                />              <p className="flex text-gray-400 font-semibold"><p className='text-black'>{car.price}</p>/day</p>
-  
+/>
+<div className='flex'>
+             
+             <span className="text-black">{car.price}</span>
+             <p className=" text-gray-400 font-semibold">
+               /day
+             </p>
+</div>  
              <div className="mt-2 flex items-center space-x-4 text-gray-600">
                   <div className="flex items-center space-x-1">
                     <BeakerIcon className="h-5 w-5 text-gray-400" />
