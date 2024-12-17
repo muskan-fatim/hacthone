@@ -1,53 +1,108 @@
 'use client'
 import { HeartIcon, UserGroupIcon, BeakerIcon, CogIcon } from '@heroicons/react/outline';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-export default function Hero() {
+import SNavbar from '../components/othernav';
+export default function Car_Details() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="flex flex-col lg:flex-row items-stretch justify-between p-10 space-y-6 lg:space-y-0 lg:space-x-6">
-        <div className="bg-blue-400 p-6 flex-1 rounded-lg">
-          <h2 className="text-3xl  text-white">The Best Platform
-            <br></br>for Car Rental</h2>
-          <p className="text-white mt-2">
-            Ease of doing a car rental safely and reliably.
-            <br />
-            Of course at a low price.
-          </p>
-          <button className="bg-blue-600 p-2 text-white mt-5">Rental car</button>
-          <Image
-            src="https://s3-alpha-sig.figma.com/img/2385/cc01/da9bb791587b8022c475d39822c50c17?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Od1UBAJf7E5O46664edEbxigGSpM3-JsBv04704PcK-9d~RrvEs6ppQdIFAuV5SO7DK4KdIOedl7rLfh~ZdB8p2H010WWUIxpXiNh9sQzC8FF~k9lq2soe-51CJOCWNOQ9uBXLpaV2LlgrPiSwu1sOYI0xh~8DBSlQU2flfi~ymjFBtsgzmBfOZ~JLvE2WnajtJi5we3G6HDB9TGun3wd~4ItGLCzi-d13QfTCKEnDG8TSJFZPpuhqdW7969joySadH-urF54-xyCZb73147LVY6vp7yqYicDPozXo-d2EmYfXV9MsNGO99O7z6K3K9ay3ZXZ4wiPTFv3OpE5E4otw__"
-            alt="Car Image"
-            className="mt-4 w-auto rounded-lg"
-            width={500}
-            height={500}
-          />
-        </div>
-        <div className="bg-blue-600 p-6 flex-1 rounded-lg">
-          <h2 className="text-3xl  text-white">Easy way to rent a
-            <br></br> car at a low price</h2>
-          <p className="text-white mt-2">
-            Providing cheap car rental services
-            <br />
-            and safe and comfortable facilities.
-          </p>
-          <button className="bg-blue-400 p-2 text-white mt-5">Rental car</button>
-          <Image
-            src="https://s3-alpha-sig.figma.com/img/702f/356e/48fe531e6fd2626c5d1041dbfcde3341?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pqchb2LXG1CzJVi8REocxTFmgsniQaQk94twikFDvW6t8unY0uN2iDgogKE7OynrmQcTaYNIAx5gzKNwVosBBUk67rgYzDQoM~MF6xD~Q4FdJCThW4M9Jx5ivd8zn4ZhbCj1htJh0idZ4nfAHEhovLfAheB7Pzse-8b4sPa3zWL8gnyyGjO7I9oi438zN0Uowsd4br~oZbWBc~d6b94I0IrcmL3OABEejvj1qBBnPvFqVYMuYmR7XEEfzN~EiPGCbSgAvJQJKT8YUrjxu-Ac5KIA5ELqg7y44XdIxm2sy2j~xK35INzWCwGjLIfRoGy3hyxBMeyOALaz0FypwC6N2A__"
-            alt="Car Image"
-            className="mt-4 w-full rounded-lg"
-            width={500}
-            height={500}
-          />
-        </div>
-      </div>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center px-4 sm:px-8 lg:px-16">
+<div className='md:flex space-x-7'>
+  <Image
+    src={"/car.png"}
+    alt="Nissan GT-R"
+    height={450}
+    width={542}
+    className="w-full max-w-lg mt-7 object-contain"
+  />
 
+  {/* Card Section */}
+  <div className="max-w-sm w-full rounded-xl border border-gray-200 shadow-lg p-6 bg-white mt-8 aria- hidden md:block">
+    {/* Header */}
+    <div className="flex justify-between items-center mb-3">
+      <h2 className="text-2xl font-bold text-gray-900">Nissan GT – R</h2>
+      <div className="text-red-500 text-2xl">❤️</div>
+    </div>
+
+    {/* Rating */}
+    <div className="flex items-center gap-2 mb-4">
+      <div className="flex text-yellow-400 text-lg">⭐⭐⭐⭐☆</div>
+      <p className="text-gray-500 text-sm">440+ Reviewer</p>
+    </div>
+
+    {/* Description */}
+    <p className="text-gray-600 mb-4">
+      NISMO has become the embodiment of Nissan's outstanding performance,
+      inspired by the most unforgiving proving ground, the "race track".
+    </p>
+
+    {/* Car Info */}
+    <div className="grid grid-cols-2 gap-y-2 mb-5 text-gray-500">
+      <p>
+        <span className="font-semibold text-gray-900">Type Car: </span> Sport
+      </p>
+      <p>
+        <span className="font-semibold text-gray-900">Capacity: </span> 2 Person
+      </p>
+      <p>
+        <span className="font-semibold text-gray-900">Steering: </span> Manual
+      </p>
+      <p>
+        <span className="font-semibold text-gray-900">Gasoline: </span> 70L
+      </p>
+      <div className="flex justify-between items-center">
+      <div>
+        <p className="text-xl font-bold text-gray-900">
+          $80.00 <span className="text-sm font-normal text-gray-500">/ days</span>
+        </p>
+        <p className="text-gray-400 line-through">$100.00</p>
+      </div>
+      <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+        Rent Now
+      </button>
+    </div>
+  </div>
+    </div>
+    </div>
+
+    {/* Price Section */}
+   
+
+  {/* Responsive Image Section */}
+  <div className="flex flex-wrap gap-6 mt-8">
+    <Image
+      src={"/c1.png"}
+      alt="Car Image 1"
+      height={124}
+      width={140}
+      className="rounded-md object-cover h-32 w-32"
+    />
+    <Image
+      src={
+        "https://s3-alpha-sig.figma.com/img/2a70/cf86/a73f1fdfda8a78629de1874016c972fe?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q7fkHyvtApAEKXFWfTYUxRF~BprEc5Q5JINvIkmbfBa4GSCyQP9EHuGaCN~M7jr~HNaEGc9Nv23T20GvkJ4MEiM31b6PTaLSJS~mGx1C5jvEyfTAY6tsk-xJGqEIepdHaH9Z~coyS-fUCVt1dZNlO500fHlojzNVDAGedZEyuU98-fVIt9lW~5J3XQrj--2AelIAyVhVsA2dH76xhfMcM9AC9whGPKJ3~2fJYJTW1ZFSl0Ps1go62VFA9MHrxycIpU9ykXNJxZ8dujbNpgQoz4Ed1Wg09E769GXiRbbCNA6hWc~cOAwxeksP3fRwqaAAMbbOTQ-wbMHiE2xj5~W5yA__"
+      }
+      alt="Car Image 2"
+      height={50}
+      width={120}
+      className="rounded-md object-cover h-32 w-32"
+    />
+    <Image
+      src={
+        "https://s3-alpha-sig.figma.com/img/b79c/e842/46da5a33b100b5e944d576a984fba3e1?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WI6kIwzpryjvdmX2Rr-rjRLLf~JWNqiKvIX85OcwJqcYOFPhLbC2vW8lqyniv94CExSdeoFIPEfS~Okwas6v-RVoQ6~NmhBm-TU03WgtqR5XaQYTE5SEC8v2NvrcRVZ~wgA4Tkd6qhvoN16iJIhdDJ4RTtDwtapPOSAzDX9WeMAHIUt0YE5q0r2gcW5YJ6tgPqAa1gYsAk5R5cKOLOgNYl26hlTK21~gWYyY67GeqiaPgKsmoGeBe~hdDX9fURjRZXyEQRuupK5hPALWdRyK~FTYWsxc6Sx4~prnn~mVNgf3a1fufOaeuI92EiT3ynUjiOTENIyRXdmuZH-PNp4-PQ__"
+      }
+      alt="Car Image 3"
+      height={50}
+      width={120}
+      className="rounded-md object-cover h-32 w-32"
+    />
+  </div>
+
+        <Image src={"/image.png"} alt='' height={900} width={1000} 
+        className='top-32 mt-7' />
 
       <div className="flex flex-wrap sm:flex-nowrap items-center justify-center">
-        {/* Left Form */}
         <div className="bg-white p-6 rounded-lg shadow-md w-full sm:w-auto max-w-xl m-4 lg:m-10">
           <form className="flex flex-wrap gap-4">
-            {/* Pickup Radio Button */}
+            {/* Pickup Radio Button */}  
             <div className="flex items-center">
               <label className="text-lg font-semibold">
                 Pickup
@@ -261,9 +316,9 @@ export default function Hero() {
                   <span className="text-sm">{car.people}</span>
                 </div>
               </div>
-             <Link href={"/details"}><button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+              <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
                 Rent Now
-              </button></Link>
+              </button>
             </div>
           ))}
         </div>
@@ -283,7 +338,7 @@ export default function Hero() {
             { name: 'New MG ZS', price: '$86.00', people: "6", transmission: "Mannual", fuel: "80L", image: "https://s3-alpha-sig.figma.com/img/2ed7/5540/73defa787d71b948931bdf156be51493?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ONSxK~-zlR4PcE8E~-IaMgarN17IyBVcgBDMWBKXTnTloQY2xWBXJc9s3zlf8TZfjZiWF7mzUE2DGaaHIYTJyMDZIPV6-TVyE-qziZIq~xfl1CO53WULROdCUN7-hiTcCmdWggbPHwG3Qg1VzwE3fzpRHif9W3bQKzu2SmdrOMEhdfw0Hys5hEwXVMPtUaJ9tw2HQYrJCamUGYunePqARfl2gIwNthFN2hzLNjQg1pia3eNU5WoebNNeZ209k1puQH~xOPzsA5o9UPVGH2Wq89eIUPjvSKy6I6BPzSQH-Wyu43uvUdHCvhHKq8VBvzVbTejJWbOrbXbZv7ZTKN77Ow__" },
           ].map((car, index) => (
             <div key={index} className="bg-white f rounded-lg shadow-lg p-4">
-              <div className='flex'>
+              <div className="flex justify-between items-start">
 
 
                 <h3 className="text-lg font-bold mt-4">{car.name}</h3>
@@ -320,14 +375,13 @@ export default function Hero() {
                 </div>
 
               </div>
-            <Link href={"/details"} ><button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+              <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
                 Rent Now
-              </button></Link>
+              </button>
             </div>
           ))}
         </div>
       </section>
-
-    </div>
+</div>
   );
 }
