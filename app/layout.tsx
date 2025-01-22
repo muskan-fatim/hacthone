@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import { ClerkProvider } from "@clerk/nextjs";
+import { NotificationProvider } from "./context/NotificationContext";
 
 export const metadata: Metadata = {
-  title: "Hacthone",
-  description: "hacthone of UI and UX",
+  title: "Hackthone",
+  description: "hackthone 3",
 };
 
 export default function RootLayout({
@@ -14,11 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >        
-
-        {children}
-
+      <body>
+        <ClerkProvider>
+          <NotificationProvider>
+            {children}
+          </NotificationProvider>
+          <Footer />
+        </ClerkProvider>
       </body>
     </html>
   );
